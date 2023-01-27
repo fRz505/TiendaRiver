@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+}
+a {
+    color: black !important;
+    font-weight: bold;
+}
+header .logoriver{
+    margin-top: 10px;
+    font-size: 2rem;
+    font-family:'Unbounded', cursive;
+    text-align: center;
+}
+
+header span {
+    color: rgb(153, 45, 45);
+}
+
+.botones {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.botones a :hover {
+    color: rgb(89, 38, 136);
+}
+
+nav a:link {
+    text-decoration: none!important;  
+}
+
+nav {
+    font-family:'Unbounded', cursive;
+    color: black;
+    font-size: 25px;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav a :hover {
+  color: rgb(89, 38, 136); 
+}
+
+.carousel .carousel-item {
+    height: 400px;
+    /* width: 400px; */
+  }
+  
+  .carousel-item img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-height: 400px;
+      /* min-width: 400px; */
+  }
+
+  footer {
+    padding: 2rem;
+    font-family:'Unbounded', cursive;
+    font-size: 20px;
+  }
+
+  .redes {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .redes a :hover {
+    color: rgb(89, 38, 136);
+  }
