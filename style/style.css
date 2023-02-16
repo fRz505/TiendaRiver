@@ -71,3 +71,10 @@ nav a :hover {
   .redes a :hover {
     color: rgb(89, 38, 136);
   }
+  
+  .productos {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
