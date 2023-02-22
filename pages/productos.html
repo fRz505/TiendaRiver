@@ -43,21 +43,27 @@
         <div class="botones">
           <a href=""><i class="fa-solid fa-magnifying-glass fa-2x"></i></a>
           <a href=""><i class="fa-solid fa-user fa-2x"></i></a>
-          <a href=""><i class="fa-solid fa-cart-shopping fa-2x"></i></a>
+          <a href=""><i class="fa-solid fa-cart-shopping fa-2x"  id="compra"></i></a>
         </div>
         <nav>
-          <a href="">Productos</a>
-          <a href="">Novedades</a>
-          <a href="">Contacto</a>
+          <a href="productos.html">Productos</a>
+          <a href="novedades.html">Novedades</a>
+          <a href="contacto.html">Contacto</a>
         </nav>
       </header>
+      <div class="botonEliminar d-flex justify-content-center m-3">
+        <button class="btn-danger" id="eliminarCarrito">
+            Eliminar Carrito
+        </button>
+      </div>
       <section class="productos">
         <div class="card shadow-lg p-3 mb-5 bg-white rounded" style="width: 18rem; margin: auto auto; text-align: center; ">
             <img src="/img/botines.jpg" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">Botines Edicion River</h5>
-              <p class="card-text">Botines adidas Goletto Viii para adultos, edicion River Plate, temporada 20/21.</p>
-              <a href="#" class="btn btn-dark">
+              <p class="card-text">Botines adidas Goletto Viii para adultos, edicion River Plate, temporada 20/21. <br>
+              $17000</p>
+              <a href="#" class="btn btn-dark" id="botines">
                 <strong class="text-white">
                   Comprar
                 </strong>
@@ -68,8 +74,9 @@
             <img src="/img/camiseta2.jpg" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">Camiseta Titular 20/21</h5>
-              <p class="card-text">Camiseta titular River Plate, utilizada en la temporada 20/21</p>
-              <a href="#" class="btn btn-dark">
+              <p class="card-text">Camiseta titular River Plate, utilizada en la temporada 20/21 <br>
+              $20000</p>
+              <a href="#" class="btn btn-dark" id="camiseta">
                 <strong class="text-white">
                   Comprar
                 </strong>
@@ -80,8 +87,9 @@
             <img src="/img/pelota2.jpg" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">Pelota Adidas SPF</h5>
-              <p class="card-text">Pelota utilizada para disputar los partidos de la superliga de futbol.</p>
-              <a href="#" class="btn btn-dark">
+              <p class="card-text">Pelota utilizada para disputar los partidos de la superliga de futbol. <br>
+              $15000</p>
+              <a href="#" class="btn btn-dark" id="pelota">
                 <strong class="text-white">
                   Comprar
                 </strong>
@@ -97,5 +105,6 @@
             <a href="https://github.com/fRz505" target="_blank"><i class="fa-brands fa-github fa-2x"></i></a>
         </div>
     </footer>
+    <script src="../script/index.js"></script>
 </body>
 </html>
