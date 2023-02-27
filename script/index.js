@@ -128,9 +128,9 @@ const key = "carrito";
 eliminarCarrito.addEventListener("click", (ev) => {
     if (localStorage.getItem(key) != null) {
         localStorage.removeItem(key);
-        alert("Carrito eliminado.")
+        swal("", "Carrito Eliminado", "success");
     }else {
-        alert("No tiene elementos en el carrito.")
+        swal("Error", "No tiene elementos en el carrito", "error");
     }
 })
 
