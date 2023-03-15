@@ -124,16 +124,19 @@ const pelota = document.getElementById("pelota");
 const camiseta = document.getElementById("camiseta");
 const botines = document.getElementById("botines");
 const key = "carrito";
+const user = document.getElementById("user");
 
-eliminarCarrito.addEventListener("click", (ev) => {
-    if (localStorage.getItem(key) != null) {
-        localStorage.removeItem(key);
-        swal("", "Carrito Eliminado", "success");
-    }else {
-        swal("Error", "No tiene elementos en el carrito", "error");
-    }
-})
 
+if (eliminarCarrito) {
+    eliminarCarrito.addEventListener("click", (ev) => {
+        if (localStorage.getItem(key) != null) {
+            localStorage.removeItem(key);
+            swal("", "Carrito Eliminado", "success");
+        }else {
+            swal("Error", "No tiene elementos en el carrito", "error");
+        }
+    })
+}
 
 compra.addEventListener("click", (ev) => {
     console.log("compra");
@@ -153,21 +156,26 @@ compra.addEventListener("click", (ev) => {
 
 })
 
- botines.addEventListener("click", (ev)=> {
-    console.log("botines");
-    armarCarrito("botines", 17000);
- })
+if (botines) {
+    botines.addEventListener("click", (ev)=> {
+        console.log("botines");
+        armarCarrito("botines", 17000);
+    })
+}
 
+if (camiseta) {
  camiseta.addEventListener("click", (ev) =>{
     console.log("camiseta");
     armarCarrito("camiseta", 20000);
  })
+}
 
+ if (pelota) {
  pelota.addEventListener("click", (ev) =>{
     console.log("pelota ");
     armarCarrito("pelota", 15000);
  })
- 
+} 
 
  //un objeto carrito, funcion, crear carrito si no esta creado, 
 
@@ -197,3 +205,14 @@ compra.addEventListener("click", (ev) => {
  }
 
 
+ user.addEventListener("click", (ev) => {
+    console.log("asd");
+    fetch("https://randomuser.me/api/").then(data => {
+        data.json().then(data => {
+            console.log(data);
+        });
+    }, (err) => {
+        console.error(err);
+    });
+
+})
