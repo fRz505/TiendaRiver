@@ -138,9 +138,10 @@ if (eliminarCarrito) {
     })
 }
 
-compra.addEventListener("click", (ev) => {
-    console.log("compra");
-    // debugger;
+if (compra) {
+    compra.addEventListener("click", (ev) => {
+        // console.log("compra");
+        // debugger;
     if (localStorage.getItem(key)!= null) {
         let carritoCompra = JSON.parse(localStorage.getItem(key));
         let mensaje = "";
@@ -151,10 +152,11 @@ compra.addEventListener("click", (ev) => {
         }
         alert("carrito: " + "\n" + mensaje +"\n" +"Total: "+calcularTotal());
     }else {
-        alert("No tiene elementos en el carrito.")
+        
     }
-
+    
 })
+}
 
 if (botines) {
     botines.addEventListener("click", (ev)=> {
@@ -205,14 +207,33 @@ if (camiseta) {
  }
 
 
- user.addEventListener("click", (ev) => {
-    console.log("asd");
-    fetch("https://randomuser.me/api/").then(data => {
-        data.json().then(data => {
-            console.log(data);
-        });
-    }, (err) => {
-        console.error(err);
-    });
+//  user.addEventListener("click", (ev) => {
+//     // console.log("asd");
+//     fetch("https://randomuser.me/api/").then(data => {
+//         data.json().then(data => {
+//             console.log(data);
+//         });
+//     }, (err) => {
+//         console.error(err);
+//     });
+// })
 
-})
+let url = 'https://randomuser.me/api/';
+fetch(url)
+.then( response => response.json() )
+.then( data => mostrarData(data) )
+.catch( error => console.log(error) )
+
+const mostrarData = (data) => {
+    console.log("data: ", data.results)
+    let body = ""
+    var bodyData = data.results;
+    for (var i = 0; i < bodyData.length; i++) {  
+         
+       body+=`<tr><td>${bodyData[i].gender}</td><td>${bodyData[i].location.city}</td><td>${bodyData[i].name.first+" "+bodyData[i].name.last}</td></tr>`
+    }
+    document.getElementById('data').innerHTML = body
+    //console.log(body)
+}
+
+
